@@ -3,9 +3,10 @@ import "./App.css"
 
 class App extends Component{
     render(){
-        let b = 3;
+        let b = 3
+        console.log("aaa")
         let c = 2
-        let a = (b * c)
+        let a = (b * c) + "a"
         return(
             <div className="App">
                 <h1> Hello, World! </h1>
