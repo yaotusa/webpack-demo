@@ -6,6 +6,7 @@ class App extends Component{
         let b = 3
         console.log("aaa")
         let c = 2
+
         let a = (b * c) + "a"
         return(
             <div className="App">

@@ -26,6 +26,7 @@
     "eslint-plugin-react": "^7.11.1",
     "file-loader": "^2.0.0",
     "html-webpack-plugin": "^3.2.0",
+    "husky": "^1.1.2",
     "style-loader": "^0.23.1",
     "webpack": "^4.20.2",
     "webpack-cli": "^3.1.2",
@@ -39,5 +40,10 @@
     "lodash": "^4.17.11",
     "react": "^16.5.2",
     "react-dom": "^16.5.2"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm eslint"
+    }
   }
 }
