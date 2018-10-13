@@ -1,0 +1,17 @@
+::placeholder {
+  color : green;
+}
+
+/* precss
+:root {
+  --fontSize: 1rem;
+  --mainColor: #12345678;
+}
+
+a {
+  color: rebeccapurple;
+
+  &:hover {
+    color: color-mod(var(--mainColor) b(15%) a(20%));
+  }
+}*/

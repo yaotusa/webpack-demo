@@ -12,7 +12,7 @@ module.exports = {
         new CleanWebpackPlugin(["dist"]),
         new HtmlWebpackPlugin({
             title: "Webpack Study",
-            template: "src/index.html"
+            template: path.resolve(__dirname, "src/index.html")
         }),
         new webpack.HashedModuleIdsPlugin(),
         new webpack.ProvidePlugin({
@@ -33,7 +33,7 @@ module.exports = {
     module: {
         rules: [
             {
-                test: /\.jsx?$/,
+                test: /\.(js|jsx)$/,
                 exclude: /node_modules/,
                 use: [
                     "babel-loader"
@@ -44,6 +44,7 @@ module.exports = {
                 use: [
                     "style-loader",
                     "css-loader",
+                    "postcss-loader",
                     "less-loader"
                 ]
             },
@@ -52,6 +53,7 @@ module.exports = {
                 use: [
                     "style-loader",
                     "css-loader",
+                    "postcss-loader",
                     "sass-loader"
                 ]
             },
@@ -59,7 +61,8 @@ module.exports = {
                 test: /\.css$/,
                 use: [
                     "style-loader",
-                    "css-loader"
+                    "css-loader",
+                    "postcss-loader"
                 ]
             },
             {
