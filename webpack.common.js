@@ -1,28 +1,34 @@
-const path = require('path');
-const webpack = require('webpack');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
-const CleanWebpackPlugin = require('clean-webpack-plugin');
+const path = require("path")
+const webpack = require("webpack")
+const HtmlWebpackPlugin = require("html-webpack-plugin")
+const CleanWebpackPlugin = require("clean-webpack-plugin")
 
 module.exports = {
     entry: {
-        main: './src/index.js',
+        main: "./src/index.js",
         //another: './src/another-module.js'
     },
     plugins: [
-        new CleanWebpackPlugin(['dist']),
+        new CleanWebpackPlugin(["dist"]),
         new HtmlWebpackPlugin({
-            title: 'Webpack Study',
-            template: 'src/index.html'
+            title: "Webpack Study",
+            template: "src/index.html"
         }),
         new webpack.HashedModuleIdsPlugin(),
         new webpack.ProvidePlugin({
-            $: 'jquery',
-            _: 'lodash'
+            $: "jquery",
+            _: "lodash"
         })
     ],
+    resolve: {
+        alias: {
+            Common: path.resolve(__dirname, "src/common/")
+        }
+    },
     output: {
-        filename: '[name].[contenthash].js',
-        path: path.resolve(__dirname, 'dist')
+        filename: "[name].[contenthash].js",
+        path: path.resolve(__dirname, "dist"),
+        publicPath: "/"
     },
     module: {
         rules: [
@@ -30,35 +36,35 @@ module.exports = {
                 test: /\.jsx?$/,
                 exclude: /node_modules/,
                 use: [
-                    'babel-loader'
+                    "babel-loader"
                 ]
             },
             {
                 test: /\.css$/,
                 use: [
-                    'style-loader',
-                    'css-loader'
+                    "style-loader",
+                    "css-loader"
                 ]
             },
             {
                 test: /\.(png|svg|jpg|gif)$/,
                 use: [
-                    'file-loader'
+                    "file-loader"
                 ]
             },
             {
                 test: /\.(csv|tsv)$/,
                 use: [
-                    'csv-loader'
+                    "csv-loader"
                 ]
             },
             {
                 test: /\.xml$/,
                 use: [
-                    'xml-loader'
+                    "xml-loader"
                 ]
             }
         ]
     }
 
-};
+}
