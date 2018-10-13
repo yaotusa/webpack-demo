@@ -1,11 +1,11 @@
 import React, { Component} from "react"
-import "./Test.less"
+import "./Test.scss"
 
 export default class Test extends Component{
     render(){
         return(
-            <div className="less">
-                <h1> Hello, Less! </h1>
+            <div className="sass">
+                <h1> Hello, Sass! </h1>
             </div>
         )
     }
