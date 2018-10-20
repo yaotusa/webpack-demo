@@ -1,3 +1,4 @@
+const path = require("path")
 const webpack = require("webpack")
 const merge = require('webpack-merge');
 const common = require('./webpack.common.js');
@@ -20,10 +21,10 @@ module.exports = merge(common, {
     },
     plugins: [
         new webpack.DllReferencePlugin({
-            context: __dirname,
-            manifest: require('./manifest.json')
+            context: path.join(__dirname),
+            manifest: require('./vendor-manifest.json')
         }),
-        new AddAssetHtmlPlugin({ filepath: require.resolve("./dist/vendor.dll.js") }),
+        new AddAssetHtmlPlugin({ filepath: path.resolve(__dirname, "./dist/*.dll.js") }),
         new BundleAnalyzerPlugin()
     ],
     optimization: {
