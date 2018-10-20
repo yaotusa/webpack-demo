@@ -16,8 +16,7 @@ module.exports = {
         }),
         new webpack.HashedModuleIdsPlugin(),
         new webpack.ProvidePlugin({
-            $: "jquery",
-            _: "lodash"
+            $: "jquery"
         })
     ],
     resolve: {
