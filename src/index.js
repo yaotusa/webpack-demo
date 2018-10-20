@@ -4,7 +4,7 @@ import {BrowserRouter as Router, Route, Link} from "react-router-dom"
 import Less from "./less"
 import Sass from "./sass"
 import PostCSS from "./postcss"
-import First from "./first"
+import First from "./package"
 
 const Index = () => (
     <Router>
