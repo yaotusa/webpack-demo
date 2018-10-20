@@ -7,7 +7,7 @@ const LoadableComponent = Loadable({
     loading: Loading
 })
 
-export default class Less extends React.Component {
+export default class PostCSS extends React.Component {
     render() {
         return <LoadableComponent />
     }

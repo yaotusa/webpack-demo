@@ -9,15 +9,23 @@ module.exports = {
     ],
     "settings": {
         "react": {
-            "version": "latest", // React version, default to the latest React stable release
+            "createClass": "createReactClass", // Regex for Component Factory to use,
+                                               // default to "createReactClass"
+            "pragma": "React",  // Pragma to use, default to "React"
+            "version": "16.0", // React version, default to the latest React stable release
+            "flowVersion": "0.53" // Flow version
         },
+        "propWrapperFunctions": [ "forbidExtraProps" ] // The names of any functions used to wrap the
+                                                       // propTypes object, e.g. `forbidExtraProps`.
+                                                       // If this isn't set, any propTypes wrapped in
+                                                       // a function will be skipped.
     },
     "parser": 'babel-eslint',
     "parserOptions": {
         "ecmaFeatures": {
             "jsx": true
         },
-        "ecmaVersion": 2018,
+        "ecmaVersion": 6,
         "sourceType": "module",
         "allowImportExportEverywhere": true
     },
@@ -41,6 +49,8 @@ module.exports = {
             "error",
             "never"
         ],
-        "react/prop-types": 0
+        "react/prop-types": [
+            "off"
+        ],
     }
 };
