@@ -1,7 +1,6 @@
 const path = require("path")
 const webpack = require("webpack")
 const HtmlWebpackPlugin = require("html-webpack-plugin")
-const CleanWebpackPlugin = require("clean-webpack-plugin")
 
 module.exports = {
     entry: {
@@ -11,7 +10,6 @@ module.exports = {
         ],
     },
     plugins: [
-        new CleanWebpackPlugin(["dist"]),
         new HtmlWebpackPlugin({
             title: "Webpack Study",
             template: path.resolve(__dirname, "src/index.html")

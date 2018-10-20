@@ -8,7 +8,6 @@ module.exports = merge(common, {
         publicPath: "/"
     },
     devServer: {
-        contentBase: './dist',
-        historyApiFallback: true
+        contentBase: './dist'
     }
 });

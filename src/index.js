@@ -1,6 +1,6 @@
 import React from "react"
 import ReactDOM from "react-dom"
-import {BrowserRouter as Router, Route, Link} from "react-router-dom"
+import {MemoryRouter as Router, Route, Link} from "react-router-dom"
 import Less from "./less"
 import Sass from "./sass"
 import PostCSS from "./postcss"

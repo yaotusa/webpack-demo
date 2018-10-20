@@ -7,6 +7,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "eslint": "eslint --fix --ext .js,.jsx src",
     "build": "webpack --config webpack.prod.js",
+    "dll-vendor": "webpack --config webpack.dll.vendor.js",
+    "dll-app": "webpack --config webpack.dll.app.js",
     "start": "webpack-dev-server --open --config webpack.dev.js"
   },
   "keywords": [],
@@ -18,6 +20,7 @@
     "@babel/plugin-syntax-dynamic-import": "^7.0.0",
     "@babel/preset-env": "^7.1.0",
     "@babel/preset-react": "^7.0.0",
+    "add-asset-html-webpack-plugin": "^3.1.1",
     "autoprefixer": "^9.1.5",
     "babel-eslint": "^8.2.6",
     "babel-loader": "^8.0.4",

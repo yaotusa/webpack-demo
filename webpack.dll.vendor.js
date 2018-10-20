@@ -1,0 +1,35 @@
+const path = require("path")
+const webpack = require("webpack")
+const CleanWebpackPlugin = require("clean-webpack-plugin")
+
+const vendors = [
+    "babel-polyfill",
+    "jquery",
+    "lodash",
+    "npm-publish-test-yaot",
+    "react",
+    "react-dom",
+    "react-loadable",
+    "react-router",
+    "react-router-dom"
+];
+
+module.exports = {
+    mode: 'production',
+    output: {
+        path: path.resolve(__dirname, "dist"),
+        filename: '[name].dll.js',
+        library: '[name]_[chunkhash]',
+    },
+    entry: {
+        vendor: vendors,
+    },
+    plugins: [
+        new CleanWebpackPlugin(["dist"]),
+        new webpack.DllPlugin({
+            path: path.join(__dirname, 'manifest.json'),
+            name: '[name]_[chunkhash]',
+            context: __dirname,
+        }),
+    ],
+};
