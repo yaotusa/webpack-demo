@@ -5,7 +5,10 @@ const CleanWebpackPlugin = require("clean-webpack-plugin")
 
 module.exports = {
     entry: {
-        main: "./src/index.js",
+        main: [
+            "babel-polyfill",
+            "./src/index.js"
+        ],
     },
     plugins: [
         new CleanWebpackPlugin(["dist"]),
@@ -26,8 +29,7 @@ module.exports = {
     },
     output: {
         filename: "[name].[contenthash].js",
-        path: path.resolve(__dirname, "dist"),
-        publicPath: "/"
+        path: path.resolve(__dirname, "dist")
     },
     module: {
         rules: [
