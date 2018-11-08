@@ -1,5 +1,5 @@
 import React, { Component} from "react"
-import "./Test.css"
+import "./test.css"
 import DisplayH1 from "Common/DisplayH1"
 import DisplayH2 from "Common/DisplayH2"
 

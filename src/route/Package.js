@@ -1,6 +1,6 @@
 import React from "react"
 import {Link, Route} from "react-router-dom"
-import First from "../package"
+import HelloWord from "../helloWord"
 
 export default class Package extends React.Component {
     render() {
@@ -30,7 +30,7 @@ class SubPackage extends React.Component {
     render() {
         let {packageId} = this.props.match.params
         if (packageId === "first") {
-            return <First/>
+            return <HelloWord/>
         }
     }
 }

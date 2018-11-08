@@ -2,8 +2,8 @@ import React from "react"
 import {Link, MemoryRouter as Router, Route} from "react-router-dom"
 
 import Home from "../home"
-import Package from "./package"
-import Css from "./css"
+import Package from "./Package"
+import Css from "./Css"
 
 export default class Index extends React.Component {
     render() {

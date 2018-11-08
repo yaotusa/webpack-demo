@@ -3,7 +3,7 @@ import Loadable from "react-loadable"
 import Loading from "Common/Loading"
 
 const LoadableComponent = Loadable({
-    loader: () => import("./Test"),
+    loader: () => import("./HelloWord"),
     loading: Loading
 })
 

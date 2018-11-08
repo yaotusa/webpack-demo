@@ -4,7 +4,7 @@ import Sass from "../sass"
 import PostCSS from "../postcss"
 import {Link, Route} from "react-router-dom"
 
-export default class Index extends React.Component {
+export default class Css extends React.Component {
     render() {
         let match = this.props.match
 
