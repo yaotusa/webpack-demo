@@ -37,12 +37,22 @@ export default class Css extends React.Component {
 class SubCss extends React.Component {
     render() {
         let {cssType} = this.props.match.params
-        if (cssType === "less") {
-            return <Less/>
-        } else if (cssType === "sass") {
-            return <Sass/>
-        } else if (cssType === "postcss") {
-            return <PostCSS/>
+
+        let component = null
+        switch (cssType) {
+        case "less":
+            component = <Less/>
+            break
+        case "sass":
+            component = <Sass/>
+            break
+        case "postcss":
+            component = <PostCSS/>
+            break
+        default:
+            break
         }
+
+        return component
     }
 }

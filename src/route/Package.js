@@ -11,7 +11,7 @@ export default class Package extends React.Component {
                 <h2>Packages</h2>
                 <ul>
                     <li>
-                        <Link to={`${match.url}/first`}>我的第一个package包</Link>
+                        <Link to={`${match.url}/helloWord`}>我的第一个package包</Link>
                     </li>
                 </ul>
 
@@ -29,8 +29,16 @@ export default class Package extends React.Component {
 class SubPackage extends React.Component {
     render() {
         let {packageId} = this.props.match.params
-        if (packageId === "first") {
-            return <HelloWord/>
+
+        let component = null
+        switch (packageId) {
+        case "helloWord":
+            component = <HelloWord/>
+            break
+        default:
+            break
         }
+
+        return component
     }
 }
