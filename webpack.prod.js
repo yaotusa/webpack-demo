@@ -24,6 +24,7 @@ module.exports = merge(common, {
     optimization: {
         runtimeChunk: 'single',
         splitChunks: {
+/*
             cacheGroups: {
                 vendor: {
                     test: /[\\/]node_modules[\\/]/,
@@ -31,6 +32,7 @@ module.exports = merge(common, {
                     chunks: 'all'
                 }
             },
+*/
             minSize: 5000,
             chunks: 'all'
         }

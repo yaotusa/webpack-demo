@@ -7,7 +7,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "eslint": "eslint --fix --ext .js,.jsx src",
     "build": "webpack --config webpack.prod.js",
-    "start": "webpack --config webpack.dll.vendor.js && webpack-dev-server --open --config webpack.dev.js"
+    "dev-dll": "webpack --config webpack.dll.vendor.js",
+    "dev-server-start": "webpack-dev-server --open --config webpack.dev.js"
   },
   "keywords": [],
   "author": "",

@@ -2,7 +2,6 @@ const path = require("path")
 const webpack = require("webpack")
 const merge = require('webpack-merge');
 const AddAssetHtmlPlugin = require('add-asset-html-webpack-plugin');
-const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 
 const common = require('./webpack.common.js');
 
@@ -20,7 +19,6 @@ module.exports = merge(common, {
             context: path.join(__dirname),
             manifest: require('./vendor-manifest.json')
         }),
-        new AddAssetHtmlPlugin({ filepath: path.resolve(__dirname, "./dist/*.dll.js") }),
-        new BundleAnalyzerPlugin()
+        new AddAssetHtmlPlugin({ filepath: path.resolve(__dirname, "./dist/*.dll.js") })
     ]
 });
