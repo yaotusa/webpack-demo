@@ -22,7 +22,7 @@ export default class Css extends React.Component {
                         <Link to={`${match.url}/postcss`}>PostCSS</Link>
                     </li>
                 </ul>
-
+                <hr/>
                 <Route path={`${match.path}/:cssType`} component={SubCss}/>
                 <Route
                     exact

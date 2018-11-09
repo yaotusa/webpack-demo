@@ -14,7 +14,7 @@ export default class Package extends React.Component {
                         <Link to={`${match.url}/helloWord`}>我的第一个package包</Link>
                     </li>
                 </ul>
-
+                <hr/>
                 <Route path={`${match.path}/:packageId`} component={SubPackage}/>
                 <Route
                     exact

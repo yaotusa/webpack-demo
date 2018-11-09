@@ -8,9 +8,9 @@ export default class Test extends Component{
         let now = $.now()
         return(
             <div className="sass">
+                {`Hello, Sass! ${now}`}
                 <DisplayH1 />
                 <DisplayH2 />
-                <h1> {`Hello, Sass! ${now}`}</h1>
             </div>
         )
     }

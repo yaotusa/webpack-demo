@@ -3,6 +3,8 @@ const webpack = require("webpack")
 const CleanWebpackPlugin = require("clean-webpack-plugin")
 
 const vendors = [
+    "antd",
+    "axios",
     "babel-polyfill",
     "jquery",
     "lodash",

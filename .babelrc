@@ -1,4 +1,8 @@
 {
   "presets": ["@babel/env", "@babel/preset-react"],
-  "plugins": ["@babel/plugin-syntax-dynamic-import"]
+  "plugins": [
+    "@babel/plugin-syntax-dynamic-import",
+    ["import", {"libraryName": "antd", "libraryDirectory": "es", "style": "css"}, "ant"],
+    ["import", {"libraryName": "lodash", "libraryDirectory": ""}, "lodash"]
+  ]
 }
