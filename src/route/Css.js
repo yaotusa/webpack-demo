@@ -10,7 +10,7 @@ export default class Css extends React.Component {
 
         return (
             <div>
-                <h2>CSS</h2>
+                <h2>Css</h2>
                 <ul>
                     <li>
                         <Link to={`${match.url}/less`}>Less</Link>

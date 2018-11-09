@@ -21,7 +21,8 @@ module.exports = {
     ],
     resolve: {
         alias: {
-            Common: path.resolve(__dirname, "src/common/")
+            Common: path.resolve(__dirname, "src/common/"),
+            Mock: path.resolve(__dirname, "mock/")
         }
     },
     output: {

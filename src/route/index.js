@@ -20,7 +20,7 @@ export default class Index extends React.Component {
                             <Link to="/packages">Packages</Link>
                         </li>
                         <li>
-                            <Link to="/css">CSS</Link>
+                            <Link to="/css">Css</Link>
                         </li>
                         <li>
                             <Link to="/list">List</Link>

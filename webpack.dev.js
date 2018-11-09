@@ -31,6 +31,8 @@ module.exports = merge(common, {
             context: path.join(__dirname),
             manifest: require('./vendor-manifest.json')
         }),
-        new AddAssetHtmlPlugin({ filepath: path.resolve(__dirname, "./dist/*.dll.js") })
+        new AddAssetHtmlPlugin({ filepath: path.resolve(__dirname, "./dist/*.dll.js") }),
+        new webpack.DefinePlugin({
+        })
     ]
 });
