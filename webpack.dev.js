@@ -14,6 +14,18 @@ module.exports = merge(common, {
     devServer: {
         contentBase: './dist'
     },
+    module: {
+        rules: [
+            {
+                test: /\.css$/,
+                use: [
+                    "style-loader",
+                    "css-loader",
+                    "postcss-loader"
+                ]
+            }
+        ]
+    },
     plugins: [
         new webpack.DllReferencePlugin({
             context: path.join(__dirname),

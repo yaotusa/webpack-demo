@@ -11,7 +11,7 @@ export default class Package extends React.Component {
                 <h2>Packages</h2>
                 <ul>
                     <li>
-                        <Link to={`${match.url}/helloWord`}>我的第一个package包</Link>
+                        <Link to={`${match.url}/helloWord`}>My first helloworld react package</Link>
                     </li>
                 </ul>
                 <hr/>
