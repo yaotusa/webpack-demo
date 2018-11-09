@@ -6,7 +6,6 @@ const vendors = [
     "antd",
     "axios",
     "babel-polyfill",
-    "jquery",
     "lodash",
     "npm-publish-test-yaot",
     "react",
