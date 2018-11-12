@@ -19,11 +19,11 @@ module.exports = {
     mode: 'development',
     output: {
         path: path.resolve(__dirname, "dist"),
-        filename: '[name].[chunkhash].dll.js',
+        filename: '[name].[chunkhash].js',
         library: '[name]_[chunkhash]',
     },
     entry: {
-        vendor: vendors,
+        dll: vendors,
     },
     plugins: [
         new CleanWebpackPlugin(["dist"]),
