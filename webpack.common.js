@@ -16,7 +16,6 @@ module.exports = {
         }),
         new webpack.HashedModuleIdsPlugin(),
         new webpack.ProvidePlugin({
-            _: "lodash"
         })
     ],
     resolve: {

@@ -3,9 +3,6 @@ module.exports = {
         "browser": true,
         "es6": true
     },
-    "globals": {
-        "_": true
-    },
     "extends": [
         "eslint:recommended",
         "plugin:react/recommended"
