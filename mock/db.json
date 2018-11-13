@@ -1,51 +1,4 @@
 {
-  "posts": [
-    {
-      "id": 1,
-      "title": "json-server1",
-      "author": "typicode1"
-    },
-    {
-      "id": 2,
-      "title": "json-server2",
-      "author": "typicode2"
-    },
-    {
-      "id": 3,
-      "title": "json-server3",
-      "author": "typicode2"
-    },
-    {
-      "id": 4,
-      "title": "json-server4",
-      "author": "typicode1"
-    }
-  ],
-  "comments": [
-    {
-      "id": 1,
-      "body": "some comment1",
-      "postId": 1
-    },
-    {
-      "id": 2,
-      "body": "some comment2",
-      "postId": 2
-    },
-    {
-      "id": 3,
-      "body": "some comment3",
-      "postId": 1
-    },
-    {
-      "id": 4,
-      "body": "some comment4",
-      "postId": 2
-    }
-  ],
-  "profile": {
-    "name": "typicode"
-  },
   "person": [
     {
       "id": 1,
@@ -77,39 +30,37 @@
       ]
     },
     {
-      "name": "Joe Black",
-      "age": 32,
-      "address": "Sidney No. 1 Lake Park",
+      "name": "li",
+      "age": 16,
+      "address": "Sidney No. 2 Lake Park",
       "tags": [
-        "cool",
-        "teacher"
+        "cool"
       ],
       "id": 4
     },
     {
-      "name": "Joe Black",
+      "name": "wang",
       "age": 32,
-      "address": "Sidney No. 1 Lake Park",
+      "address": "Fuzhou No.1",
       "tags": [
-        "cool",
-        "teacher"
+        "student"
       ],
       "id": 5
     },
     {
-      "name": "Joe Black",
-      "age": 32,
-      "address": "Sidney No. 1 Lake Park",
+      "name": "zhang",
+      "age": 20,
+      "address": "Fuzhou Taijiang",
       "tags": [
-        "cool",
-        "teacher"
+        "ugly",
+        "stupid"
       ],
       "id": 6
     },
     {
-      "name": "Joe Black",
-      "age": 32,
-      "address": "Sidney No. 1 Lake Park",
+      "name": "Yao",
+      "age": 35,
+      "address": "Wai ban No.16",
       "tags": [
         "cool",
         "teacher"
@@ -117,19 +68,20 @@
       "id": 7
     },
     {
-      "name": "Joe Black",
-      "age": 32,
-      "address": "Sidney No. 1 Lake Park",
+      "name": "Huang",
+      "age": 19,
+      "address": "Huo kou No. 5",
       "tags": [
-        "cool",
-        "teacher"
+        "handsome",
+        "nice",
+        "clever"
       ],
       "id": 8
     },
     {
-      "name": "Joe Black",
-      "age": 32,
-      "address": "Sidney No. 1 Lake Park",
+      "name": "Joe Black 2",
+      "age": 25,
+      "address": "Miami No. 3 street",
       "tags": [
         "cool",
         "teacher"
@@ -137,9 +89,9 @@
       "id": 9
     },
     {
-      "name": "Joe Black",
+      "name": "Joe Black 3",
       "age": 32,
-      "address": "Sidney No. 1 Lake Park",
+      "address": "Sidney No. 2 Lake Park",
       "tags": [
         "cool",
         "teacher"
@@ -147,9 +99,9 @@
       "id": 10
     },
     {
-      "name": "Joe Black",
+      "name": "Joe Black 4",
       "age": 32,
-      "address": "Sidney No. 1 Lake Park",
+      "address": "Sidney No. 4 Lake Park",
       "tags": [
         "cool",
         "teacher"
@@ -157,12 +109,11 @@
       "id": 11
     },
     {
-      "name": "Joe Black",
-      "age": 32,
-      "address": "Sidney No. 1 Lake Park",
+      "name": "Tao",
+      "age": 16,
+      "address": "Luo Yuan Hou Zhang",
       "tags": [
-        "cool",
-        "teacher"
+        "happy"
       ],
       "id": 12
     }

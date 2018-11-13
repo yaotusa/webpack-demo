@@ -1,6 +1,6 @@
 import React from "react"
 
-import { Table, Divider, Tag } from "antd"
+import {Table, Divider, Tag} from "antd"
 import axios from "Mock/axios"
 
 const columns = [{
@@ -31,7 +31,7 @@ const columns = [{
     render: (text, record) => (
         <span>
             <a href="javascript:;">Invite {record.name}</a>
-            <Divider type="vertical" />
+            <Divider type="vertical"/>
             <a href="javascript:;">Delete</a>
         </span>
     ),
@@ -40,19 +40,57 @@ const columns = [{
 export default class Index extends React.Component {
     constructor(props) {
         super(props)
-        this.state = {data: []}
+        this.state = {
+            data: [],
+            pagination: {
+                total: 0,
+                current: 1,
+                showTotal: (total) => {
+                    return `Total ${total} items`
+                }
+            }
+        }
+
+        this.handleChange = this.handleChange.bind(this)
     }
 
-    async componentDidMount(){
-        let response = await axios.get("/person")
+    async fetchData(pagination) {
+        let response = await axios.get("/person", {
+            params: {
+                _page: pagination.current,
+                _limit: 10
+            }
+        })
 
         let data = response.data.map((item) => {
             item.key = item.id
             return item
         })
-        this.setState({data: data})
+        let total = Number.parseInt(response.headers["x-total-count"])
+
+        this.setState({
+            data: data,
+            pagination: {...pagination, total}
+        })
     }
+
+    async componentDidMount() {
+        this.fetchData(this.state.pagination)
+    }
+
+    handleChange(pagination) {
+        let current = pagination.current
+        let newPagination = {...this.state.pagination, current}
+
+        this.fetchData(newPagination)
+    }
+
     render() {
-        return <Table columns={columns} dataSource={this.state.data} />
+        return <Table
+            columns={columns}
+            dataSource={this.state.data}
+            pagination={this.state.pagination}
+            onChange={this.handleChange}
+        />
     }
 }
