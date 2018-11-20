@@ -51,13 +51,14 @@ export default class Index extends React.Component {
             }
         }
 
+        this.pagination = this.state.pagination
         this.handleChange = this.handleChange.bind(this)
     }
 
-    async fetchData(pagination) {
+    async fetchData() {
         let response = await axios.get("/person", {
             params: {
-                _page: pagination.current,
+                _page: this.pagination.current,
                 _limit: 10
             }
         })
@@ -70,19 +71,19 @@ export default class Index extends React.Component {
 
         this.setState({
             data: data,
-            pagination: {...pagination, total}
+            pagination: {...this.pagination, total}
         })
     }
 
     async componentDidMount() {
-        this.fetchData(this.state.pagination)
+        this.fetchData()
     }
 
     handleChange(pagination) {
         let current = pagination.current
-        let newPagination = {...this.state.pagination, current}
+        this.pagination = {...this.state.pagination, current}
 
-        this.fetchData(newPagination)
+        this.fetchData()
     }
 
     render() {
