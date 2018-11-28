@@ -49,6 +49,9 @@ module.exports = {
             "error",
             "never"
         ],
+        "no-console": [
+            "off"
+        ],
         "react/prop-types": [
             "off"
         ],

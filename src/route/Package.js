@@ -1,6 +1,6 @@
 import React from "react"
 import {Link, Route} from "react-router-dom"
-import HelloWord from "../helloWord"
+import HelloWorld from "../helloWorld"
 
 export default class Package extends React.Component {
     render() {
@@ -11,7 +11,7 @@ export default class Package extends React.Component {
                 <h2>Packages</h2>
                 <ul>
                     <li>
-                        <Link to={`${match.url}/helloWord`}>My first helloworld react package</Link>
+                        <Link to={`${match.url}/helloWorld`}>My first helloworld react package</Link>
                     </li>
                 </ul>
                 <hr/>
@@ -32,8 +32,8 @@ class SubPackage extends React.Component {
 
         let component = null
         switch (packageId) {
-        case "helloWord":
-            component = <HelloWord/>
+        case "helloWorld":
+            component = <HelloWorld/>
             break
         default:
             break

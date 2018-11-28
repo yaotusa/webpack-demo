@@ -75,7 +75,7 @@ export default class Index extends React.Component {
         })
     }
 
-    async componentDidMount() {
+    componentDidMount() {
         this.fetchData()
     }
 
