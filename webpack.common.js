@@ -42,7 +42,7 @@ module.exports = {
                 test: /\.less$/,
                 use: [
                     "style-loader",
-                    "css-loader",
+                    "css-loader?modules",
                     "postcss-loader",
                     "less-loader"
                 ]
@@ -51,7 +51,7 @@ module.exports = {
                 test: /\.scss$/,
                 use: [
                     "style-loader",
-                    "css-loader",
+                    "css-loader?modules",
                     "postcss-loader",
                     "sass-loader"
                 ]
