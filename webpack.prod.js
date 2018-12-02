@@ -22,9 +22,25 @@ module.exports = merge(common, {
             },
             {
                 test: /\.css$/,
+                exclude: /node_modules/,
                 use: [
                     MiniCssExtractPlugin.loader,
-                    "css-loader?modules",
+                    {
+                        loader: 'css-loader',
+                        options: {
+                            modules: true,
+                            localIdentName: '[path][name]__[local]--[hash:base64:5]'
+                        }
+                    },
+                    "postcss-loader"
+                ]
+            },
+            {
+                test: /\.css$/,
+                include: /node_modules/,
+                use: [
+                    MiniCssExtractPlugin.loader,
+                    "css-loader",
                     "postcss-loader"
                 ]
             }
