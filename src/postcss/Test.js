@@ -6,7 +6,7 @@ import DisplayH2 from "Common/DisplayH2"
 export default class Test extends Component{
     render(){
         return(
-            <div className="less">
+            <div>
                 <input type={"input"} placeholder={"请输入"} maxLength={10}/>
                 <DisplayH1 />
                 <DisplayH2 />
