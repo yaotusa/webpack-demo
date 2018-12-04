@@ -25,7 +25,8 @@ module.exports = merge(common, {
                         loader: 'css-loader',
                         options: {
                             modules: true,
-                            localIdentName: '[path][name]__[local]--[hash:base64:5]'
+                            importLoaders: 1,
+                            localIdentName: '[path]___[name]__[local]',
                         }
                     },
                     "postcss-loader"
@@ -44,7 +45,7 @@ module.exports = merge(common, {
     },
     plugins: [
         new webpack.DllReferencePlugin({
-            context: path.join(__dirname),
+            // context: path.join(__dirname),
             manifest: require('./dll-manifest.json')
         }),
         new AddAssetHtmlPlugin({ filepath: path.resolve(__dirname, "./dist/dll.*.js") }),

@@ -3,10 +3,11 @@ const webpack = require("webpack")
 const HtmlWebpackPlugin = require("html-webpack-plugin")
 
 module.exports = {
+    context: path.resolve(__dirname, "src"),
     entry: {
         main: [
             "babel-polyfill",
-            "./src/index.js"
+            "./index.js"
         ],
     },
     plugins: [
@@ -42,7 +43,14 @@ module.exports = {
                 test: /\.less$/,
                 use: [
                     "style-loader",
-                    "css-loader?modules",
+                    {
+                        loader: 'css-loader',
+                        options: {
+                            modules: true,
+                            importLoaders: 2,
+                            localIdentName: '[path]___[name]__[local]',
+                        }
+                    },
                     "postcss-loader",
                     "less-loader"
                 ]
@@ -51,7 +59,14 @@ module.exports = {
                 test: /\.scss$/,
                 use: [
                     "style-loader",
-                    "css-loader?modules",
+                    {
+                        loader: 'css-loader',
+                        options: {
+                            modules: true,
+                            importLoaders: 2,
+                            localIdentName: '[path]___[name]__[local]',
+                        }
+                    },
                     "postcss-loader",
                     "sass-loader"
                 ]

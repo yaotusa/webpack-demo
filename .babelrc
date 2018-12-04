@@ -1,8 +1,41 @@
 {
-  "presets": ["@babel/env", "@babel/preset-react"],
+  "presets": [
+    "@babel/env",
+    "@babel/preset-react"
+  ],
   "plugins": [
     "@babel/plugin-syntax-dynamic-import",
-    ["import", {"libraryName": "antd", "libraryDirectory": "es", "style": "css"}, "ant"],
-    ["import", {"libraryName": "lodash", "libraryDirectory": ""}, "lodash"]
+    [
+      "import",
+      {
+        "libraryName": "antd",
+        "libraryDirectory": "es",
+        "style": "css"
+      },
+      "ant"
+    ],
+    [
+      "import",
+      {
+        "libraryName": "lodash",
+        "libraryDirectory": ""
+      },
+      "lodash"
+    ],
+    [
+      "react-css-modules",
+      {
+        "context": "./src",
+        "generateScopedName": "[path]___[name]__[local]",
+        "filetypes": {
+          ".scss": {
+            "syntax": "postcss-scss"
+          },
+          ".less": {
+            "syntax": "postcss-less"
+          }
+        }
+      }
+    ]
   ]
 }

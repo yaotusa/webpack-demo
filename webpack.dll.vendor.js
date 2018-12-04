@@ -30,7 +30,7 @@ module.exports = {
         new webpack.DllPlugin({
             path: path.join(__dirname, '[name]-manifest.json'),
             name: '[name]_[chunkhash]',
-            context: __dirname,
+            // context: __dirname,
         }),
     ],
 };
