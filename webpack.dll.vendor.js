@@ -28,9 +28,9 @@ module.exports = {
     plugins: [
         new CleanWebpackPlugin(["dist"]),
         new webpack.DllPlugin({
+            context: __dirname,
             path: path.join(__dirname, '[name]-manifest.json'),
-            name: '[name]_[chunkhash]',
-            // context: __dirname,
+            name: '[name]_[chunkhash]'
         }),
     ],
 };

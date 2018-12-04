@@ -45,7 +45,7 @@ module.exports = merge(common, {
     },
     plugins: [
         new webpack.DllReferencePlugin({
-            // context: path.join(__dirname),
+            context: __dirname,
             manifest: require('./dll-manifest.json')
         }),
         new AddAssetHtmlPlugin({ filepath: path.resolve(__dirname, "./dist/dll.*.js") }),
