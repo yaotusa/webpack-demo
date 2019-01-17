@@ -5,7 +5,6 @@ const CleanWebpackPlugin = require("clean-webpack-plugin")
 const vendors = [
     "antd",
     "axios",
-    "babel-polyfill",
     "lodash",
     "npm-publish-test-yaot",
     "react",
