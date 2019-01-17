@@ -3,7 +3,11 @@
     [
       "@babel/preset-env",
       {
-        "useBuiltIns": "entry"
+        "useBuiltIns": "entry",
+        "targets": {
+          "chrome": "60",
+          "ie": "11"
+        }
       }
     ],
     "@babel/preset-react"
