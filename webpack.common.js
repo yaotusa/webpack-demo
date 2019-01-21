@@ -12,7 +12,7 @@ module.exports = {
     plugins: [
         new HtmlWebpackPlugin({
             title: "Webpack Study",
-            favicon: path.resolve(__dirname, "src/favicon.ico"),
+            favicon: path.resolve(__dirname, "src/static/favicon.ico"),
             template: path.resolve(__dirname, "src/index.html")
         }),
         new webpack.HashedModuleIdsPlugin(),
