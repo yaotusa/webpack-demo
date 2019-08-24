@@ -4,7 +4,7 @@ import {Link, HashRouter as Router, Route} from "react-router-dom"
 import Home from "../home"
 import Package from "./Package"
 import Css from "./Css"
-import List from "../list"
+import List from "Components/list"
 
 export default class Index extends React.Component {
     render() {
